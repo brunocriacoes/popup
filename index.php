@@ -66,7 +66,7 @@
         </table>    
         <div>
             <label for="popup-upload">
-                <img src="<?= content_url( 'uploads/lead-popup/foto.jpg' ) ?>" id="popup-upload-p">
+                <img src="<?= content_url( 'uploads/lead-popup/foto.jpg?'. uniqid() ) ?>" id="popup-upload-p">
             </label>
             <input type="file" id="popup-upload" onchange="previwew_img( 'popup-upload', 'popup-upload-p' )" hidden>   
         </div>

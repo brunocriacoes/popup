@@ -31,7 +31,7 @@
         left: 0;
         padding: 24px;
         display: grid;
-        grid-template-columns: 1fr 150px;
+        grid-template-columns: 1fr 170px;
         width: 100%;
         grid-gap: 24px;
     }
@@ -71,16 +71,23 @@
         top: -15px;
         z-index: 999;
     }
+    @media only screen and (max-width: 600px) {
+        .m-pop > div > form {
+            position: relative;
+            grid-template-columns: 1fr;
+            background: #000;
+        }  
+    }
 </style>
 
 <input type="checkbox" id="m-action-pop"  hidden>
 <div class="m-pop">
     <div>
         <label for="m-action-pop"> X </label>
-        <img src="<?= content_url( 'uploads/lead-popup/foto.jpg' ) ?>">
+        <img src="<?= content_url( 'uploads/lead-popup/foto.jpg?'. uniqid() ) ?>">
         <form action="javascript:void(meInscrever())">
             <input type="text" id="tel-popup" onkeypress="setMascara(this, '(99) 9 9999-9999')" required>
-            <input type="submit" value="Me Cadastrar">
+            <input type="submit" value="QUERO RECEBER">
         </form>
     </div>  
 </div>
